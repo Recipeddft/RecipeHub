@@ -10,7 +10,7 @@ body {
 }
 
 .site-header {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: linear-gradient(135deg, #751E23, #ff003f);
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -107,7 +107,7 @@ body {
 
 .search-bar button {
     padding: 10px 15px;
-    background-color: #ff7e5f;
+    background-color: #c50031;
     border: none;
     border-radius: 5px;
     color: white;
@@ -117,13 +117,13 @@ body {
 }
 
 .search-bar button:hover {
-    background-color: #feb47b;
+    background-color: #ff003f;
 }
 
 .cta-btn {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #ff7e5f;
+    background-color: #c50031;
     color: white;
     font-size: 1.2rem;
     text-decoration: none;
@@ -132,7 +132,8 @@ body {
 }
 
 .cta-btn:hover {
-    background-color: #feb47b;
+    background-color: #ff003f;
+}
 }
 
 footer {
@@ -141,31 +142,7 @@ footer {
     background-color: #333;
     color: #fff;
 }
-/* Footer Styles */
-.site-footer {
-    background-color: #333;  /* Dark background color */
-    color: #fff;  /* Light text for contrast */
-    padding: 20px 0;
-    text-align: center;
-}
-
-.site-footer p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.9rem;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #feb47b; /* Matches the hover color of your header */
-}
-/* Most Viewed Dishes Section */
+/* Footer Styles *//* Most Viewed Dishes Section */
 .most-viewed-dishes {
     background: #fff; /* Clean background for contrast */
     padding: 60px 0;
@@ -252,7 +229,7 @@ footer {
     display: inline-block;
     margin-top: 10px;
     padding: 12px 20px;
-    background-color: #ff7e5f; /* Button color */
+    background: #491516; /* Button color */
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -261,6 +238,300 @@ footer {
 }
 
 .recipe-btn:hover {
-    background-color: #feb47b; /* Hover effect on button */
+    background-color: #ff003f; /* Hover effect on button */
     color: #333;
+}
+
+.site-footer {
+    background-color: #333;  /* Dark background color */
+    color: #fff;  /* Light text for contrast */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.site-footer p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff003f; /* Matches the hover color of your header */
+}
+/* Most Viewed Recipes Section */
+.most-viewed-recipes {
+    background: linear-gradient(135deg, #aa6876, #ff003f); /* Gradient background */
+    padding: 60px 0;
+    color: white;
+    text-align: center;
+}
+
+.most-viewed-recipes h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Sacramento', cursive;
+    color: #fff;
+}
+
+/* Container for the cards */
+.card-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+}
+
+/* Hide scrollbar but still allow scrolling */
+.card-container::-webkit-scrollbar {
+    display: none;
+}
+
+.card-container {
+    -ms-overflow-style: none; /* For Internet Explorer */
+    scrollbar-width: none; /* For Firefox */
+}
+
+/* Card Styling */
+.card {
+    position: relative;
+    width: 300px; /* Fixed width for each card */
+    height:200px;
+    background-color: #fff; /* Light background color */
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0; /* Prevent cards from shrinking */
+    scroll-snap-align: start;
+    margin-bottom: 30px;
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Subtle lift effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Slight increase in shadow on hover */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card img:hover {
+    transform: scale(1.05); /* Slight zoom effect on image hover */
+}
+
+.card-content {
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    color: white;
+    text-align: center;
+    border-top-left-radius: 12px; /* Rounded top corners */
+    border-top-right-radius: 12px;
+}
+
+.card h3 {
+    font-size: 1.6rem;
+    margin: 0;
+    font-weight: bold;
+    color: white;
+}
+
+.card p {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.recipe-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #c50031; /* Button color */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.recipe-btn:hover {
+    background-color: #ff003f; /* Hover effect on button */
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+.site-header {
+    background: linear-gradient(135deg, #751E23, #ff003f);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: 'Sacramento', cursive;
+    font-size: 3rem;
+}
+
+.logo span {
+    color: #fffb7a;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu ul li {
+    margin: 0 15px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    color: #fffb7a;
+}
+
+/* Search Page Section */
+.search-page {
+    background: linear-gradient(135deg, #FF6A00, #FF3E6D);  /* Gradient background */
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: 'Sacramento', cursive;
+    color: white;
+}
+
+.search-form input {
+    width: 80%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+.search-form button {
+    padding: 12px 20px;
+    background-color: #ff003f;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #ff6a00;
+}
+
+/* Footer Styles */
+.site-footer {
+    background: linear-gradient(135deg, #ff003f, #a3456a);  /* Footer gradient to match search page */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.site-footer p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fffb7a;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .search-form {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .search-form input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-links {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .footer-links a {
+        margin: 10px 0;
+        display: block;
+    }
 }
